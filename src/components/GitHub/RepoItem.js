@@ -15,7 +15,9 @@ const RepoItem = (props) => {
 				</div>
 				<div className="col-half">
 
+
 					{
+						// if there are no issues, then no issues will render else loop through all issues and render the links
 						repo.issues && (repo.issues.edges.length > 0) ?
 							(<>
 								<h4>Issues</h4>
@@ -28,11 +30,14 @@ const RepoItem = (props) => {
 							:
 							null
 					}
-					{repo.languages && (repo.languages.edges.length > 0) ?
-						repo.languages.edges.map(
-							language => <RepoLanguage key={language.node.id} language={language} />
-						) :
-						null}
+					{
+						//render through the languages if any
+						repo.languages && (repo.languages.edges.length > 0) ?
+							repo.languages.edges.map(
+								language => <RepoLanguage key={language.node.id} language={language} />
+							) :
+							null
+					}
 
 				</div>
 			</div>

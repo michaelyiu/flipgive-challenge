@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const GET_REPOS = gql`
-  query test($login: String! $count: Int!){
+  query ($login: String! $count: Int!){
     organization(login: $login) {
       id    # needed to add this to stop the browser from complaining about merging organization objects
       repositories(last: $count) {
@@ -17,7 +17,6 @@ export const GET_REPOS = gql`
                   id
                   title
                   url
-                  closed
                 }
               }
             }

@@ -16,7 +16,8 @@ const GitHubRepos = () => {
 	})
 
 
-
+	// if the query is still loading data, a spinner will be displayed until
+	// the response is ready and the data will be passed to a different component
 	return (
 		<div className="repoSection">
 			{

@@ -9,11 +9,14 @@ const SearchBar = () => {
 
 	const { setFilter } = useContext(SearchContext);
 
+	//sets filter text on submit and stores into SearchContext
 	return (
 		<div>
 			<form className="searchForm" onSubmit={handleSubmit}>
-				<input type="text" className="search-notes" placeholder="Search organizations.." name="filter" onChange={handleChange} />
-				<button className="search-submit" type="submit"><i className="fa fa-search"></i></button>
+				<input type="text" placeholder="Search organizations.." name="filter" onChange={handleChange} />
+				<button type="submit">
+					<i className="fa fa-search"></i>
+				</button>
 			</form>
 		</div>
 	)

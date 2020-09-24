@@ -4,10 +4,12 @@ import { SearchContext } from './../contexts/SearchContext';
 const ResultSelector = () => {
 	const { numResult, setNumResult } = useContext(SearchContext);
 
+
 	const handleClick = (result) => {
 		setNumResult(result);
 	}
 
+	//lets user choose how many to display, chosen number gets stored into state in SearchContext
 	return (
 		<div>
 			<p> Max results:
