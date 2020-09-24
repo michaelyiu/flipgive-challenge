@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.repoSection {
+	margin: 1rem 0;	
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.repoItem{
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+	margin-bottom: .5rem;
+	padding: 1.25rem;
+	background-color: #f8f9fa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h4.repoName{
+	color: #17a2b8;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+h4.repoName a{
+	color: inherit;
+	text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row{
+	display: flex;
+	margin-right: -15px;
+	margin-left: -15px;
 }
+
+.col-half{
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding-right: 15px; 
+  padding-left: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+		border-radius: .25rem;
+		margin-right: .25rem;
+}
+.issueName {
+	margin-right: 45px;
+}
+
+.resultSelector{
+	margin: 0 0.5rem;
+}
+
+@media (min-width: 576px){
+	.container {
+			max-width: 540px;
+	}
+
+}
+@media(min-width: 768px){
+	.container{
+		max-width: 720px;
+	}
+}
+@media(min-width: 1200px){
+	.container{
+		max-width: 1140px;
+	}
+}
+
