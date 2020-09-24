@@ -8,21 +8,23 @@ import ResultSelector from './components/ResultSelector';
 import client from './apollo';
 
 import SearchContextProvider from './contexts/SearchContext';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
     <div className="App">
       <ApolloProvider client={client}>
         <SearchContextProvider>
-
+          <Header />
           <div className="container">
 
-            <h1>FlipGive Challenge</h1>
-            <h2>Search for repositories</h2>
+
             <SearchBar />
             <ResultSelector />
             <GitHubRepos />
           </div>
+          <Footer />
         </SearchContextProvider>
       </ApolloProvider>
     </div>

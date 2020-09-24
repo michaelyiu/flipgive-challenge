@@ -26,7 +26,7 @@ const GitHubRepos = () => {
 						? data.organization.repositories.edges.map(
 							repo => <RepoItem key={repo.node.id} repo={repo} />
 						)
-						: null
+						: <div>No organization by the name "{filter}" was found :(</div>
 			}
 		</div>
 	)

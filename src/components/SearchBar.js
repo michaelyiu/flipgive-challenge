@@ -11,7 +11,8 @@ const SearchBar = () => {
 
 	//sets filter text on submit and stores into SearchContext
 	return (
-		<div>
+		<div style={{ textAlign: 'center' }}>
+			<h2>Search for repositories</h2>
 			<form className="searchForm" onSubmit={handleSubmit}>
 				<input type="text" placeholder="Search organizations.." name="filter" onChange={handleChange} />
 				<button type="submit">
